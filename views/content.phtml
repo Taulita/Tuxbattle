@@ -1,0 +1,28 @@
+<div id="container" class="container">
+	<div class="row">
+		<form action="index.php?page=content" method="POST">
+			<button class='btn btn-inverse pull-right' type='submit' name='logout'>D&eacute;connexion</button>
+		</form>
+	</div>
+	<div id="application" class="row-fluid divcontainer">
+		<div id="player1" class="span3 playerleft">
+			<?php require("apps/player.left.php"); ?>
+			
+		</div>
+		<div id="statsgame" class="span6">
+			<h2 class="modules">Stats Jeux</h2>
+			<div class="span10 offset1 gamestats">
+				<?php require("apps/game.php"); ?>
+			</div>
+		</div>
+		<div id="player2" class="span3 playerright">
+			<?php require("apps/player.right.php"); ?>
+		</div>
+	</div>
+	<div id="application" class="row-fluid divcontainer">
+		<div id="equipements" class="span12 equipement">
+			<h2 class="modules">Armurerie</h2>
+			<?php require("apps/".$section.".php"); ?>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,129 @@
+/* font-family: 'Great Vibes', cursive; */
+body{
+	background: url("../../sources/img/background.jpg") no-repeat fixed center center / 180% auto #000000;
+	background-color: #000000;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	}
+
+h1.titre{
+	color: #FF0000;
+	display: block;
+	font-family: 'Great Vibes',cursive;
+	font-size: 32pt;
+	font-weight: lighter;
+	margin: 48px auto;
+	text-shadow: 0 -1px 3px #FFFF00, 0 -4px 5px #FFA500, 0 -7px 7px #FF0000, 0 -11px 12px #8B0000;
+	width: 300px;
+	}
+#container{
+	/*border: 1px dashed #FFFF00;*/
+	}
+.divcontainer{
+	margin: 16px 0 16px 0;
+}
+#player1, #player2, #statsgame, #equipements{
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+	/*border:  1px solid #FF0000;*/equipement
+	float: left;
+	}
+#player1:hover, #player2:hover, #statsgame:hover, #equipements:hover{
+	box-shadow: 2px 2px 8px rgba(255, 255, 153, 0.8), -2px -2px 8px rgba(255, 255, 15.3, 0.5);
+	}
+
+.infosfooter{
+	color: #FFA500;
+	font-size: 9pt;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 1.2;
+	text-align: center;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	}
+/* Joueurs */
+.playerleft, .playerright, .gamestats, .equipement {
+	color: #F5DEB3;
+	font-size: 12pt;
+	font-weight: bold;
+	line-height: 1;
+	text-align: center;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+height: 300px;
+	}
+/* Modules du jeux */
+h2.modules{
+	font-family: 'Great Vibes', cursive;
+	font-weight: lighter;
+	margin-bottom: 2px;
+}
+
+/* Partie à ajouter au pot commun ! */
+.playerleft img {
+	max-width: 70%;
+	height: auto;
+	margin-bottom: 0px;
+
+}
+.playerright img {
+	display: inline-block;
+	max-width: 70%;
+	height: auto;
+	margin-bottom: 0px;
+}
+.stats p {
+	margin: 0px 0 0px 0;
+	text-align: left;
+	font-size: 8pt;
+}
+.statusbar {
+	width: 8%;
+	height: auto;
+}
+meter {
+	width: 60%;
+	-moz-appearance: meterbar;
+	background: rgba(80, 80, 80, 0.5);
+}
+meter::-webkit-meter-bar {
+	background: none;
+	background-color: rgba(80, 80, 80, 0.5);
+	box-shadow: 0 5px 5px -5px #333 inset;
+}
+meter::-moz-meter-bar {
+	-moz-appearance: meterchunk;
+	display: inline-block;
+	float: none;
+	overflow: visible;
+	position: static;
+	background: none;
+	/*background-color: rgba(80, 80, 80, 0.5);*/
+	box-shadow: 0 5px 5px -5px #333 inset;
+}
+:-moz-meter-optimum::-moz-meter-bar {
+	background: #85B546;
+}
+:-moz-meter-sub-optimum::-moz-meter-bar {
+	background: #EED555;
+}
+:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+	background: #DD4444;
+}
+.clearfix {
+	clear: both;
+	display: block;
+	height: 1px;
+}
+.equipmentmodule p {
+	display: inline;
+	/*float: right;*/
+	font-size: 8pt;
+	text-align: left;
+	width: 50%;
+}
+
+.equipmentmodule img {
+	display: none;
+	/*float: left;*/
+}

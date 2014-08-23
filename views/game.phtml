@@ -1,0 +1,22 @@
+<div class="game">
+	<p class="text-center span12"><?=$ligne?><br></p>
+	<?php
+	if ( $histo['nom1'] == $_SESSION["joueur"] )
+	{?>
+			<p class="span6 bubble-right"><?=$histo['message1']?></p>
+			<!--<small><cite><?=$histo['nom1']?></cite></small>-->
+			<p class="pull-right span6 bubble-left"><?=$histo['message2']?></p>
+			<!--<small><cite class="pull-right"><?=$histo['nom2']?></cite></small>-->
+	<?php
+	}
+	else
+	{?>
+			<p class="span6 bubble-right"><?=$histo['message2']?></p>
+			<!--<small><cite><?=$histo['nom2']?></cite></small>-->
+			<p class="pull-right span6 bubble-left"><?=$histo['message1']?></p>
+			<!--<small><cite class="pull-right"><?=$histo['nom1']?></cite></small>-->
+	<?php
+	}?>
+</div>
+
+	

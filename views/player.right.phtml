@@ -1,0 +1,61 @@
+<h2 class="modules"><?= $data['nom']?></h2> 
+
+<div class="row-fluid">
+	<div class="span6">
+		<img src="sources/img/enemy/<?= $data['arme']?>.png"/>
+	</div>
+	<div class="equipmentmodule" class="span6">
+<!--
+<img class="weaponimg" src="sources/img/arme/arc.png" width="7%" height="7%"/>
+<img class="weaponimg" src="sources/img/arme/epee.png" width="9%" height="9%"/>
+<img class="weaponimg" src="sources/img/arme/massu.jpeg" width="7%" height="7%"/>
+
+		<p class="selectedweapon2"></p> <br/>
+
+<img class="potionimg" src="sources/img/potion/maravak.png" width="7%" height="7%"/>
+<img class="potionimg" src="sources/img/potion/surprise.png" width="7%" height="7%"/>
+<img class="potionimg" src="sources/img/potion/joba.png" width="7%" height="7%"/>
+
+		<p class="selectedpotion2"></p> <br/>
+
+<img class="spellimg" src="sources/img/sort/kiss.png" width="7%" height="7%"/>
+<img class="spellimg" src="sources/img/sort/honey.png" width="7%" height="7%"/>
+
+		<p class="selectedspell2"></p>
+-->
+	</div>
+</div>
+
+<div class="stats" id="stats_player2">
+	<p title="Health Points">
+		<img src="sources/img/etat/pv.png" class="statusbar" class="hpbar"/>:
+		<meter value="<?= $data['pv'] ?>" min="0" max="1000" low="200" high="750" optimum="1000">	
+		</meter>
+		<?= $data['pv']?> / 1500
+	</p> 
+</br> 
+	<p title="Stamina">
+		<img src="sources/img/etat/force.png" class="statusbar" class="staminabar"/>:
+		<meter value="<?= $data['strength'] ?>" min="0" max="100" low="20" high="75" optimum="100">	
+		</meter>
+		<?= $data['strength'] ?>/ 100
+	</p>
+</br>
+	<p title="Armor">
+		<img src="sources/img/etat/armor.png" class="statusbar" class="armorbar"/>:
+		<meter value="<?= $data['armure'] ?>" min="0" max="100" low="20" high="75" optimum="100">	
+		</meter>
+		<?= $data['armure'] ?> / 100
+	</p>
+</br>
+	<p title="Agility">
+		<img src="sources/img/etat/agilite.png" class="statusbar" class="agilitybar"/>:
+		<meter value="<?= $data['agility'] ?>" min="0" max="100" low="20" high="75" optimum="100">	
+		</meter>
+		<?= $data['agility'] ?> / 100
+	</p>
+
+
+</div>
+
+

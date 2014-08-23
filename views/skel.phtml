@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title><?=$titre_application?></title>
+		<!-- Styles -->
+		<link rel="stylesheet" href="sources/css/reset.css">
+	    <link rel="stylesheet" href="sources/css/bootstrap.css">
+	    <link rel="stylesheet" href="sources/css/bootstrap-responsive.css">
+	    <link rel="stylesheet" href="sources/css/animate.css">
+	    <link rel="stylesheet" href="sources/css/font-awesome.css">
+    	<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="sources/css/tux_battle_style.css">
+		
+		<!-- Scripts -->
+		<script src="sources/js/jquery.js"></script>
+		<script src="sources/js/bootstrap.js"></script>
+  	</head>
+  
+ 	<body>
+  		<div class="content">
+
+		    <header class='container'>
+		      <?php require('apps/header.php'); ?>	
+			</header>
+
+		    <section class='container'>
+		      <?php require('apps/'.$page.'.php'); ?>	
+			</section>
+				
+		    <footer class="container">
+		      <?php require('apps/footer.php'); ?>
+			</footer>
+
+	  	</div>
+	<script type="text/javascript" src="sources/js/script.js"></script>
+	</body>
+</html>
+
+

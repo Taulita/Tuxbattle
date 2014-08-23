@@ -1,0 +1,31 @@
+<form action="index.php?page=content&section2=ok" method="POST">
+	<div class="row">
+		
+		
+		<div class="span3 offset1">	
+			<h3 class="armurerie">Choix de l'arme</h3>
+			<?php require('apps/armes.php'); ?>
+		</div>
+		
+		<div class="span3 offset1">
+			<h3 class="armurerie">Choix d'une potion</h3>
+			<?php require('apps/potion.php'); ?>
+		</div>
+		
+		<div class="span3 offset1">
+			<h3 class="armurerie">Choix du sortilège</h3>
+			<?php require('apps/sort.php'); ?>
+		</div>
+
+	</div>
+	
+	<div class="row">
+		<p><?=$error?></p>
+	</div>
+
+	<div class="div-btn-jeux">
+		<input class="span2 offset4 btn btn-success btn-jeux" type="submit" name='play' value='JOUER'>
+		<!-- <input class="span2 offset1 btn btn-inverse btn-jeux" type="submit" name='cancel' value='QUITTER'> -->
+	</div>
+
+</form>

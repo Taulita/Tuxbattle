@@ -1,0 +1,23 @@
+<form action="index.php?page=content" method="POST">
+	<div class="row">	
+		<div class="span3 offset1">	
+			<label for="f_potion">Choix de votre Arme </label>	
+			<?php require('apps/armes.php'); ?>
+		</div>
+		
+		<div class="span3 offset1">
+			<label for="f_potion">Choix de votre Potion</label>
+			<?php require('apps/potion.php'); ?>
+		</div>
+		
+		<div class="span3 offset1">
+			<label for="f_sort">Choix de votre Sort</label>
+			<?php require('apps/sort.php'); ?>
+		</div>
+	</div>
+
+	<div class="span6 offset3 play">
+		<input class="span3 btn btn-success" type="submit" name='play' value='JOUER'>
+	</div>
+
+</form>
