@@ -114,18 +114,5 @@ if($player1->isAlive() && $player2->isAlive())
 	}
 }
 
-require("views/content.phtml");
-
-
-
-
-
-
-
-
-
-
-
-
-		
+require("views/content.phtml");		
 ?>
