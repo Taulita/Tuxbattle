@@ -34,10 +34,10 @@ class Combattant
 			if($reu==1)
 			{
 				$this->subir($this->damage*10/$this->armure);
-				$joueur->message="Tu sais pas vis&eacute, tu t'es tap&eacute; dessus!";
+				$joueur->message="Tu sais pas viser, tu t'es tapé dessus!";
 			}
 			else
-				$joueur->message="Tu sais pas vis&eacute, tu ne m'as pas touch&eacute;";
+				$joueur->message="Tu sais pas viser,  tu ne m'as pas touché!";
 		}
 		else
 		{
@@ -59,8 +59,7 @@ class Combattant
 			$this->agility=$this->agility/$this->coeff;	
 			$this->ajustDegat();
 			$this->ajustEtat();
-			$this->message="Houcht!";
-			
+			$this->message="Houcht!";	
 		}
 		
 	}
@@ -85,7 +84,6 @@ class Combattant
 		{	
 			$this->esquive=rand(1,70);
 		}
-
 	}
 
 	
@@ -116,15 +114,15 @@ class Combattant
 			else if($reussite==2)
 			{
 				$this->armure+=25;
-				$this->message="J'ai r&eacute;par&eacute; mon armure!";
+				$this->message="J'ai réparé mon armure!";
 			}
 			else if($reussite==3)
 			{
 				$this->agility+=25;
-				$this->message="J'ai plus d'agilit&eacute;!";
+				$this->message="J'ai plus d'agilité!";
 			}
 			else
-				$this->message="Damn, la potion n'a pas march&eacute;!";
+				$this->message="Damn, la potion n'a pas marché!";
 		}
 		else if($potion->getPv()==100)
 		{
@@ -135,7 +133,7 @@ class Combattant
 				$this->message="Cette potion est fantastique je me sens revivre!";	
 			}
 			else
-				$this->message="Damn, la potion n'a pas march&eacute;!";
+				$this->message="Damn, la potion n'a pas marché!";
 		}		
 	}
 
@@ -143,15 +141,15 @@ class Combattant
 	{
 		$this->sort=$sort->getNom();
 		if($sort->getHarakiri()==1)
-			$this->harakiri=$sort->getHarakiri();
+			$this->harakiri=1;
 		else if($sort->getMegadegat()==1)
 		{
 			$reussite=rand(1,3);
 			if($reussite==1)
 			{
 				$this->damage= $this->damage*2;
-				$this->message="Br&ucirc;le dans les flammes de l'enfer!";	
-			}	
+				$this->message="Brûle dans les flammes de l'enfer!";	
+			}
 		}	
 	}
 
