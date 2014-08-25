@@ -1,0 +1,29 @@
+.custom-row
+{
+	position: relative;
+	width: 100%;
+}
+.choix-arme
+{
+	display: inline-block;
+	width: 20%;
+	margin: 0 96px 0 48px;
+}
+.choix-potion
+{
+	display: inline-block;
+	width: 20%;
+	margin: 0 auto;
+}
+.choix-sort
+{
+	display: inline-block;
+	width: 20%;
+	margin: 0 48px 0 96px;
+}
+
+.play
+{
+	width: 300px;
+	margin: 0 auto;
+}

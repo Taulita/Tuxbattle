@@ -8,7 +8,6 @@ if(isset($_SESSION['joueur']))
 {
 	//require('index.php?page=content');
 	$req="INSERT INTO t_game(name1,name2) VALUES('".$_SESSION['joueur']."','computer')";
-	//var_dump($req);
 	mysqli_query($db, $req);
 	$_SESSION['partie']=mysqli_insert_id($db);
 	require("apps/content.php");
