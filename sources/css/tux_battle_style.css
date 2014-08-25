@@ -47,15 +47,18 @@ h1.titre{
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 	}
 /* Joueurs */
-.playerleft, .playerright, .gamestats, .equipement {
+.playerleft, .playerright, .gamestats, .equipement, #equipements legend {
 	color: #F5DEB3;
 	font-size: 12pt;
 	font-weight: bold;
 	line-height: 1;
 	text-align: center;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
-height: 300px;
+	height: 300px;
 	}
+#equipements legend {
+	height: 20px;
+}
 
 .gamestats{
     background-color: rgba(80, 80, 80, 0.5);
@@ -116,14 +119,19 @@ label.connexion{
 
 /* Armurerie */
 
-
-.play{
-	margin-top: 40px;
-
-}
-
 .arme li, .potion li, .sort li{
 	position: relative;
+}
+
+#equipements input[type="radio"]{
+	display: none;
+}
+#equipements input+ #equipements img{
+	cursor: pointer;
+}
+
+#equipements input[type="radio"]:checked + img{
+	box-shadow: 2px 2px 8px rgba(255, 255, 153, 0.8), -2px -2px 8px rgba(255, 255, 15.3, 0.5);
 }
 
 
@@ -156,8 +164,16 @@ label.connexion{
 	margin: 0 6px !important;
 }
 
-.pictogramme:hover{
-	cursor: pointer;
+#equipements .row{
+	margin-right: 10%;
+	margin-left: 10%;
+}
+#equipements .container {
+	margin-right: 8%;
+}
+
+#equipements .container:last-child {
+	margin-right: none;
 }
 
 /*.armurerie{

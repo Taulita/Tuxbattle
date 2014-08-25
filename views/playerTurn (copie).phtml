@@ -1,20 +1,20 @@
 <form action="index.php?page=content" method="POST">
-	<div class="custom-row">
-		<div class="choix-arme">	
+	<div class="row">	
+		<div class="container span3">	
 			<legend>Choix de votre Arme </legend>
 			<ul class="inline unstyled arme">
 				<?php require('apps/armes.php'); ?>
 			</ul>	
 		</div>
 		
-		<div class="choix-potion">
-			<legend>Choix de votre Potion</legend>
+		<div class="container span3">
+			<legend>-Choix de votre Potion</legend>
 			<ul class="inline unstyled potion">
 				<?php require('apps/potion.php'); ?>
 			</ul>
 		</div>
 		
-		<div class="choix-sort">
+		<div class="container span3">
 			<legend>Choix de votre Sort</legend>
 			<ul class="inline unstyled sort">
 				<?php require('apps/sort.php'); ?>
@@ -22,8 +22,8 @@
 		</div>
 	</div>
 
-	<div class="play">
-		<input class="span12 btn btn-success" type="submit" name='play' value='JOUER'>
+	<div class="span6 offset3 play">
+		<input class="span3 btn btn-success" type="submit" name='play' value='JOUER'>
 	</div>
 
 </form>

@@ -96,15 +96,15 @@ if($player1->isAlive() && $player2->isAlive())
 		// Rentrer les informations dans la BD.
 		$req = "INSERT INTO t_histo(id1, nom1, arme1, potion1, sort1, message1, damage, id2, nom2, message2, game)
 		VALUES ('".$player['id']."','".$player['nom']."','".$player['arme']."','".$player['potion']."',
-				'".$player['sort']."','".$player['message']."','".$player['damage']."','".$enemy['id']."',
-				'".$enemy['nom']."','".$enemy['message']."','".$idgame."')";
+				'".$player['sort']."','".addslashes($player['message'])."','".$player['damage']."','".$enemy['id']."',
+				'".$enemy['nom']."','".addslashes($enemy['message'])."','".$idgame."')";
 		mysqli_query($db, $req);
 		$req="UPDATE t_joueur SET pv='".$player['pv']."', armure='".$player['armure']."', agility= '".$player['agility']."', 
-			strength='".$player['strength']."', arme='".$player['arme']."' 
+			strength='".$player['strength']."', arme='".$player['arme']."', bouclier='".$player['bouclier']."' 
 			WHERE id='".$player['id']."'";
 		mysqli_query($db,$req);
 	
-		$req="UPDATE t_joueur SET pv='".$enemy['pv']."', armure='".$enemy['armure']."', agility= '".$enemy['agility']."', strength='".$enemy['strength']."' 
+		$req="UPDATE t_joueur SET pv='".$enemy['pv']."', armure='".$enemy['armure']."', agility= '".$enemy['agility']."', strength='".$enemy['strength']."', bouclier='".$enemy['bouclier']."'  
 			WHERE id='".$enemy['id']."'";
 		mysqli_query($db,$req);
 		if(!($player1->isAlive()))
@@ -114,18 +114,5 @@ if($player1->isAlive() && $player2->isAlive())
 	}
 }
 
-require("views/content.phtml");
-
-
-
-
-
-
-
-
-
-
-
-
-		
+require("views/content.phtml");		
 ?>

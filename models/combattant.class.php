@@ -15,7 +15,7 @@ class Combattant
 
 	private $damage;
 	private $message;
-	private $bouclier;
+	private $bouclier=0;
 	private $esquive;
 	private $coeff=1;
 	private $harakiri;
@@ -34,10 +34,10 @@ class Combattant
 			if($reu==1)
 			{
 				$this->subir($this->damage*10/$this->armure);
-				$joueur->message="Tu sais pas vis&eacute, tu t'es tap&eacute; dessus!";
+				$joueur->message="Tu sais pas viser, tu t'es tapé dessus!";
 			}
 			else
-				$joueur->message="Tu sais pas vis&eacute, tu ne m'as pas touch&eacute;";
+				$joueur->message="Tu sais pas viser,  tu ne m'as pas touché!";
 		}
 		else
 		{
@@ -50,7 +50,11 @@ class Combattant
 	{
 		$this->setEsquive();
 		if($this->bouclier==1)
-			$this->message="Bouclier Magique!";
+		{
+		 	$this->message="Bouclier Magique!";
+		 	$this->bouclier=0;
+		}
+			
 		else if($this->esquive==1)
 			$this->message="Esquive!";
 		else
@@ -59,8 +63,7 @@ class Combattant
 			$this->agility=$this->agility/$this->coeff;	
 			$this->ajustDegat();
 			$this->ajustEtat();
-			$this->message="Houcht!";
-			
+			$this->message="Houcht!";	
 		}
 		
 	}
@@ -85,7 +88,6 @@ class Combattant
 		{	
 			$this->esquive=rand(1,70);
 		}
-
 	}
 
 	
@@ -103,7 +105,7 @@ class Combattant
 		$this->potion=$potion->getNom();
 		if($potion->getProtection()==1)
 		{
-			$this->bouclier=rand(1,20);
+			$this->bouclier=rand(1,4);
 		}
 		else if($potion->getRando()==1)
 		{
@@ -116,15 +118,15 @@ class Combattant
 			else if($reussite==2)
 			{
 				$this->armure+=25;
-				$this->message="J'ai r&eacute;par&eacute; mon armure!";
+				$this->message="J'ai réparé mon armure!";
 			}
 			else if($reussite==3)
 			{
 				$this->agility+=25;
-				$this->message="J'ai plus d'agilit&eacute;!";
+				$this->message="J'ai plus d'agilité!";
 			}
 			else
-				$this->message="Damn, la potion n'a pas march&eacute;!";
+				$this->message="Damn, la potion n'a pas marché!";
 		}
 		else if($potion->getPv()==100)
 		{
@@ -135,7 +137,7 @@ class Combattant
 				$this->message="Cette potion est fantastique je me sens revivre!";	
 			}
 			else
-				$this->message="Damn, la potion n'a pas march&eacute;!";
+				$this->message="Damn, la potion n'a pas marché!";
 		}		
 	}
 
@@ -143,15 +145,15 @@ class Combattant
 	{
 		$this->sort=$sort->getNom();
 		if($sort->getHarakiri()==1)
-			$this->harakiri=$sort->getHarakiri();
+			$this->harakiri=1;
 		else if($sort->getMegadegat()==1)
 		{
 			$reussite=rand(1,3);
 			if($reussite==1)
 			{
 				$this->damage= $this->damage*2;
-				$this->message="Br&ucirc;le dans les flammes de l'enfer!";	
-			}	
+				$this->message="Brûle dans les flammes de l'enfer!";	
+			}
 		}	
 	}
 
@@ -253,6 +255,10 @@ class Combattant
 	{
 		return $this->arme;
 	}
+	private function getBouclier()
+	{
+		return $this->bouclier;
+	}
 	private function getSort()
 	{
 		return $this->sort;
@@ -280,6 +286,7 @@ class Combattant
 		$player['agility']=$this->getAgility();
 		$player['strength']=$this->getStrength();
 		$player['armure']=$this->getArmure();
+		$player['bouclier']=$this->getBouclier();
 		$player['pv']=$this->getPv();
 		$player['arme']=$this->getArme();
 		$player['sort']=$this->getSort();
@@ -298,6 +305,7 @@ class Combattant
 		$enney['armure']=$ennemy->getArmure();
 		$enney['pv']=$ennemy->getPV();
 		$enney['message']=$ennemy->getMessage();
+		$enney['bouclier']=$ennemy->getBouclier();
 		return $enney;
 	}
 
