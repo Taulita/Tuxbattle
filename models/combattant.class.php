@@ -15,7 +15,7 @@ class Combattant
 
 	private $damage;
 	private $message;
-	private $bouclier;
+	private $bouclier=0;
 	private $esquive;
 	private $coeff=1;
 	private $harakiri;
@@ -50,7 +50,11 @@ class Combattant
 	{
 		$this->setEsquive();
 		if($this->bouclier==1)
-			$this->message="Bouclier Magique!";
+		{
+		 	$this->message="Bouclier Magique!";
+		 	$this->bouclier=0;
+		}
+			
 		else if($this->esquive==1)
 			$this->message="Esquive!";
 		else
@@ -101,7 +105,7 @@ class Combattant
 		$this->potion=$potion->getNom();
 		if($potion->getProtection()==1)
 		{
-			$this->bouclier=rand(1,20);
+			$this->bouclier=rand(1,4);
 		}
 		else if($potion->getRando()==1)
 		{
@@ -251,6 +255,10 @@ class Combattant
 	{
 		return $this->arme;
 	}
+	private function getBouclier()
+	{
+		return $this->bouclier;
+	}
 	private function getSort()
 	{
 		return $this->sort;
@@ -278,6 +286,7 @@ class Combattant
 		$player['agility']=$this->getAgility();
 		$player['strength']=$this->getStrength();
 		$player['armure']=$this->getArmure();
+		$player['bouclier']=$this->getBouclier();
 		$player['pv']=$this->getPv();
 		$player['arme']=$this->getArme();
 		$player['sort']=$this->getSort();
@@ -296,6 +305,7 @@ class Combattant
 		$enney['armure']=$ennemy->getArmure();
 		$enney['pv']=$ennemy->getPV();
 		$enney['message']=$ennemy->getMessage();
+		$enney['bouclier']=$ennemy->getBouclier();
 		return $enney;
 	}
 
