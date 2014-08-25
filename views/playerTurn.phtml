@@ -1,21 +1,21 @@
 <form action="index.php?page=content" method="POST">
 	<div class="row">	
-		<div class="container span3 offset1">	
-			<label for="f_arme">Choix de votre Arme </label>
+		<div class="container span3">	
+			<legend>Choix de votre Arme </legend>
 			<ul class="inline unstyled arme">
 				<?php require('apps/armes.php'); ?>
 			</ul>	
 		</div>
 		
-		<div class="container span3 offset1">
-			<label for="f_potion">Choix de votre Potion</label>
+		<div class="container span3">
+			<legend>Choix de votre Potion</legend>
 			<ul class="inline unstyled potion">
 				<?php require('apps/potion.php'); ?>
 			</ul>
 		</div>
 		
-		<div class="container span3 offset1">
-			<label for="f_sort">Choix de votre Sort</label>
+		<div class="container span3">
+			<legend>Choix de votre Sort</legend>
 			<ul class="inline unstyled sort">
 				<?php require('apps/sort.php'); ?>
 			</ul>
