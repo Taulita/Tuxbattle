@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 25, 2014 at 11:46 AM
+-- Generation Time: Aug 25, 2014 at 12:22 PM
 -- Server version: 5.5.37-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4
 
@@ -31,7 +31,18 @@ CREATE TABLE IF NOT EXISTS `t_game` (
   `name1` varchar(30) NOT NULL,
   `name2` varchar(30) NOT NULL,
   PRIMARY KEY (`idgame`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `t_game`
+--
+
+INSERT INTO `t_game` (`idgame`, `name1`, `name2`) VALUES
+(1, 'Taulita', 'computer'),
+(2, 'Taulita', 'computer'),
+(3, 'Taulita', 'computer'),
+(4, 'Taulita', 'computer'),
+(5, 'Taulita', 'computer');
 
 -- --------------------------------------------------------
 
@@ -54,7 +65,43 @@ CREATE TABLE IF NOT EXISTS `t_histo` (
   `nom2` varchar(32) NOT NULL,
   `damage` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+
+--
+-- Dumping data for table `t_histo`
+--
+
+INSERT INTO `t_histo` (`id`, `game`, `id1`, `arme1`, `potion1`, `sort1`, `armure1`, `message1`, `id2`, `message2`, `nom1`, `nom2`, `damage`) VALUES
+(1, 1, 19, 'massu', 'joba', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 5000),
+(2, 1, 1, 'massu', 'Pas de potion', 'honey', '', '', 19, 'Houcht!', 'MakaTux', 'Taulita', 4750),
+(3, 1, 19, 'massu', 'joba', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 4750),
+(4, 1, 1, 'epee', 'Pas de potion', 'Pas de sort', '', '', 19, 'Houcht!', 'MakaTux', 'Taulita', 1875),
+(5, 1, 19, 'massu', 'joba', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 4250),
+(6, 2, 19, 'massu', 'joba', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 5000),
+(7, 2, 1, 'arc', 'surprise', 'kiss', '', 'Damn, la potion n''a pas marchÃ©!', 19, 'Tu sais pas viser,  tu ne m''as pas touchÃ©!', 'MakaTux', 'Taulita', 1900),
+(8, 2, 19, 'massu', 'joba', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 5000),
+(9, 2, 1, 'arc', 'Pas de potion', 'Pas de sort', '', '', 19, 'Houcht!', 'MakaTux', 'Taulita', 1500),
+(10, 2, 19, 'epee', 'joba', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 2375),
+(11, 2, 1, 'arc', 'Pas de potion', 'kiss', '', '', 19, 'Tu sais pas viser,  tu ne m''as pas touchÃ©!', 'MakaTux', 'Taulita', 700),
+(12, 2, 19, 'epee', 'Pas de potion', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 2375),
+(13, 3, 19, 'epee', 'maravak', 'Pas de sort', '', 'Damn, la potion n''a pas marchÃ©!', 1, 'Houcht!', 'Taulita', 'MakaTux', 2500),
+(14, 3, 1, 'massu', 'Pas de potion', 'honey', '', 'BrÃ»le dans les flammes de l''enfer!', 19, 'Bouclier Magique!', 'MakaTux', 'Taulita', 9500),
+(15, 3, 19, 'massu', 'surprise', 'kiss', '', 'J''ai plus d''agilitÃ©!', 1, 'Tu sais pas viser,  tu ne m''as pas touchÃ©!', 'Taulita', 'MakaTux', 5000),
+(16, 3, 1, 'massu', 'Pas de potion', 'honey', '', '', 19, 'Bouclier Magique!', 'MakaTux', 'Taulita', 4750),
+(17, 3, 1, 'massu', 'Pas de potion', 'honey', '', 'BrÃ»le dans les flammes de l''enfer!', 19, 'Bouclier Magique!', 'MakaTux', 'Taulita', 9500),
+(18, 3, 19, 'massu', 'Pas de potion', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 5000),
+(19, 3, 1, 'arc', 'maravak', 'Pas de sort', '', 'Damn, la potion n''a pas marchÃ©!', 19, 'Houcht!', 'MakaTux', 'Taulita', 1700),
+(20, 3, 19, 'massu', 'joba', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 4750),
+(21, 3, 1, 'arc', 'Pas de potion', 'Pas de sort', '', '', 19, 'Houcht!', 'MakaTux', 'Taulita', 900),
+(22, 3, 19, 'massu', 'joba', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 4500),
+(23, 4, 19, 'massu', 'surprise', 'Pas de sort', '', 'J''ai plus d''agilitÃ©!', 1, 'Houcht!', 'Taulita', 'MakaTux', 5000),
+(24, 4, 1, 'arc', 'maravak', 'Pas de sort', '', 'Damn, la potion n''a pas marchÃ©!', 19, 'Bouclier Magique!', 'MakaTux', 'Taulita', 1900),
+(25, 4, 1, 'epee', 'surprise', 'Pas de sort', '', 'J''ai rÃ©parÃ© mon armure!', 19, 'Houcht!', 'MakaTux', 'Taulita', 2375),
+(26, 4, 19, 'massu', 'joba', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 4750),
+(27, 4, 1, 'massu', 'surprise', 'Pas de sort', '', 'J''ai plus d''agilitÃ©!', 19, 'Houcht!', 'MakaTux', 'Taulita', 4250),
+(28, 4, 19, 'massu', 'joba', 'Pas de sort', '', '', 1, 'Houcht!', 'Taulita', 'MakaTux', 4250),
+(29, 4, 1, 'massu', 'Pas de potion', 'Pas de sort', '', '', 19, 'Bouclier Magique!', 'MakaTux', 'Taulita', 2250),
+(30, 4, 19, 'massu', 'surprise', 'Pas de sort', '', 'Damn, la potion n''a pas marchÃ©!', 1, 'Houcht!', 'Taulita', 'MakaTux', 4250);
 
 -- --------------------------------------------------------
 
@@ -75,17 +122,19 @@ CREATE TABLE IF NOT EXISTS `t_joueur` (
   `armure` smallint(5) NOT NULL,
   `strength` smallint(5) NOT NULL,
   `agility` smallint(5) NOT NULL,
-  PRIMARY KEY (`id`)
+  `bouclier` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `nom` (`nom`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `t_joueur`
 --
 
-INSERT INTO `t_joueur` (`id`, `nom`, `arme`, `email`, `password`, `avatar`, `defaite`, `victoire`, `pv`, `armure`, `strength`, `agility`) VALUES
-(1, 'MakaTux', 'clear', '', '', 0, 29, 25, 1500, 100, 100, 100),
-(19, 'Taulita', 'clear', 'taulita@free.fr', '827ccb0eea8a706c4c34a16891f84e7b', 0, 15, 29, 1500, 100, 100, 100),
-(20, 'Mat', 'clear', 'mat@mat.fr', '6ca29d9bb530402bd09fe026ee838148', 0, 11, 3, 1500, 100, 100, 100);
+INSERT INTO `t_joueur` (`id`, `nom`, `arme`, `email`, `password`, `avatar`, `defaite`, `victoire`, `pv`, `armure`, `strength`, `agility`, `bouclier`) VALUES
+(1, 'MakaTux', 'clear', '', '', 0, 33, 25, 1500, 100, 100, 100, 0),
+(19, 'Taulita', 'clear', 'taulita@free.fr', '827ccb0eea8a706c4c34a16891f84e7b', 0, 15, 33, 1500, 100, 100, 100, 0),
+(20, 'Mat', 'clear', 'mat@mat.fr', '6ca29d9bb530402bd09fe026ee838148', 0, 11, 3, 1500, 100, 100, 100, 0);
 
 -- --------------------------------------------------------
 

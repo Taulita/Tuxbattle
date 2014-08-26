@@ -101,11 +101,11 @@ if($player1->isAlive() && $player2->isAlive())
 				'".$enemy['nom']."','".addslashes($enemy['message'])."','".$idgame."')";
 		mysqli_query($db, $req);
 		$req="UPDATE t_joueur SET pv='".$player['pv']."', armure='".$player['armure']."', agility= '".$player['agility']."', 
-			strength='".$player['strength']."', arme='".$player['arme']."' 
+			strength='".$player['strength']."', arme='".$player['arme']."', bouclier='".$player['bouclier']."' 
 			WHERE id='".$player['id']."'";
 		mysqli_query($db,$req);
 	
-		$req="UPDATE t_joueur SET pv='".$enemy['pv']."', armure='".$enemy['armure']."', agility= '".$enemy['agility']."', strength='".$enemy['strength']."' 
+		$req="UPDATE t_joueur SET pv='".$enemy['pv']."', armure='".$enemy['armure']."', agility= '".$enemy['agility']."', strength='".$enemy['strength']."', bouclier='".$enemy['bouclier']."'  
 			WHERE id='".$enemy['id']."'";
 		mysqli_query($db,$req);
 		if(!($player1->isAlive()))
