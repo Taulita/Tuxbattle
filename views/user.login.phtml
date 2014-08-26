@@ -2,12 +2,17 @@
 	<div class="div-center">
 		<form action="index.php?page=user.login" method="POST" id="formcnx" class="form-horizontal formcnx">
 			<h2 class="titre-form" id="titreform">Connexion</h2>
+			
 			<div class="control-group" style="margin:2px">
-				<label for="pseudo" class="control-label connexion" style="width: 100px">Joueur</label>
+				<label for="pseudo_joueur" class="control-label connexion" style="width: 100px">Joueur</label>
 				<div class="controls" style="margin-left: 120px;">
-					<input id="pseudo" type="text" placeholder="Votre pseudo&hellip;" name="f_joueur" value="<?= $joueur?>" />
+					<input id="pseudo_joueur" onkeyup="userPseudo('pseudo_joueur');" type="text" placeholder="Votre pseudo&hellip;" name="f_joueur" value="<?= $joueur?>" />
 				</div>
 			</div>
+			
+
+
+
 			<div class="control-group" style="margin:2px">
 				<label for="password" class="control-label connexion" style="width: 100px">Mot de passe</label>
 				<div class="controls" style="margin-left: 120px;">

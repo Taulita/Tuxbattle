@@ -11,7 +11,8 @@ if(isset($_POST['logout']))
 }
 
 //Preparation des Combattants
-$joueur=$_SESSION['joueur'];
+$joueur=mysqli_real_escape_string($db, $_SESSION['joueur']);
+var_dump($joueur);
 $res = mysqli_query($db, "SELECT * FROM t_joueur WHERE nom = '".$joueur."'");
 $player1 = mysqli_fetch_object($res, "Combattant");
 $res2 = mysqli_query($db, "SELECT * FROM t_joueur WHERE id =1");
